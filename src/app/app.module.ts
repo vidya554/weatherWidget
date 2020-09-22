@@ -9,7 +9,8 @@ import { SearchService } from './Components/search-city/search.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from "@angular/common/http";
 import { ForecastComponent } from './Components/forecast/forecast.component';
-// import { Http } from '@angular/http';
+import { NotificationComponent } from './Components/notification/notification.component';
+import { TripPlannerComponent } from './Components/trip-planner/trip-planner.component';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { ForecastComponent } from './Components/forecast/forecast.component';
     AppComponent,
     CurrentWeatherComponent,
     SearchCityComponent,
-    ForecastComponent
+    ForecastComponent,
+    NotificationComponent,
+    TripPlannerComponent
   ],
   imports: [
     BrowserModule,

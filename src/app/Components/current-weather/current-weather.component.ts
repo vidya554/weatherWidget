@@ -26,7 +26,7 @@ export class CurrentWeatherComponent implements OnInit {
   public _URL: String = 'http://localhost:3000/weather/current/';
   public ServiceURL:String = '';
   results: any;
-  Movie: Object;
+  Obj: Object;
   constructor(
     private _searchService: SearchService,
     private _currentWeather: CurrentWeatherService,
@@ -54,7 +54,7 @@ export class CurrentWeatherComponent implements OnInit {
   fetchData(){
     const promise = this.httpClient.get(this._URL+this.parameter).toPromise();
     promise.then((data)=>{
-     this.Movie = data
+     this.Obj = data
     this.setWeatherData(data);
     }).catch((error)=>{
       console.log("Promise rejected with " + JSON.stringify(error));
