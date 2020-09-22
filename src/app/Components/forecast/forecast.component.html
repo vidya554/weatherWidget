@@ -1,0 +1,26 @@
+<br>
+<br>
+<br>
+
+<ul>
+    <li *ngFor="let day of days; let index = index">
+      <div class="dateOfDay" style="display: block; text-align: -webkit-center;">{{day}}</div>
+
+        <div id="divWeatherMain">
+            <div *ngIf="ForecastData.isDay" class="currentWeatherRow">
+                <i class="fas fa-3x fa-sun sun"></i>
+            </div>
+            <div *ngIf="!ForecastData.isDay" class="currentWeatherRow">
+                <i class="fas fa-3x fa-moon moon"></i>
+            </div>
+            <div class="currentWeatherRow cloudDiv">
+                <i class="fas fa-cloud fa-3x cloud"></i>
+            </div>
+            <div class="currentWeatherRow" style="font-size: 16px;margin-top: 5px;">{{temp_celcius}}°</div>
+            <div class="currentWeatherRow" style="font-size: 8px;">{{ForecastData.temp_min}}° / {{ForecastData.temp_max}}°</div>
+            <div class="currentWeatherRow" style="font-size: 8px;">Feels Like: {{ForecastData.temp_feels_like}}°</div>
+            <div class="currentWeatherRow" style="font-size: 12px;margin-top: 10px;">{{ForecastData.name}}</div>
+        </div>
+      <!-- {{ day }} in {{ForecastData.name}} -->
+    </li>
+  </ul>
